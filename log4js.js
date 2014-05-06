@@ -16,6 +16,10 @@ var Logger = (function () {
       log.call(this, arguments[0]);
       callback.call();
     }
+
+    return {
+      log;
+    }
   };
 
   var instance;
