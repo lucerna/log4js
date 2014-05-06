@@ -11,14 +11,14 @@ console.info = console.info || function() {};
   
 var Logger = (function () {
   function Logger() {
+    //Private logging stuff...
     var log = console.log;
-    console.log = function(callback) {
+    console.log = function() {
       log.call(this, arguments[0]);
-      callback.call();
     }
 
     return {
-      log;
+      instance.log
     }
   };
 
