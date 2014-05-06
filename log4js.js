@@ -21,7 +21,7 @@ var Logger = (function () {
   var instance;
   return {
     getInstance: function() {
-                   if(instance === null) {
+                   if(instance == null) {
                     instance = new Logger();
                     instance.constructor = null;
                    }
