@@ -10,6 +10,7 @@ console.info = console.info || function() {};
 
   
 var Logger = (function () {
+
   function Logger() {
     //Private logging stuff...
     var log = console.log;
@@ -55,6 +56,7 @@ var Logger = (function () {
     });
 
   var instance;
+
   return {
     getInstance: function() {
                    if(instance == null) {
