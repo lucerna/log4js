@@ -10,6 +10,7 @@ console.info = console.info || function() {};
 
   
 var Logger = (function () {
+
   function Logger() {
     //Private logging stuff...
     var log = console.log;
