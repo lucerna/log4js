@@ -27,5 +27,5 @@ var Logger = (function () {
                    }
                   }
   }
-});
+})();
 
