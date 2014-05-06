@@ -55,6 +55,7 @@ var Logger = (function () {
     });
 
   var instance;
+
   return {
     getInstance: function() {
                    if(instance == null) {
