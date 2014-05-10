@@ -30,27 +30,31 @@ var Logger = (function () {
 
       setLogLevel: function(level) {
                     LEVEL.setLevel(level);              
+                   },
+      getLogLevel: function() {
+                    return LEVEL.currentLevel;
                    }
     }
   };
   var Level = (function() {
       function Level() {};
-      var LOG   = 0;
-      var DEBUG = 1;
-      var INFO  = 2;
-      var WARN  = 3;
-      var ERROR = 4;
-
-      var currentLevel = 0;
 
       return {
+        LOG: 0,
+        DEBUG: 1,
+        INFO:  2,
+        WARN:  3,
+        ERROR: 4,
+
+        currentLevel: 0,
+
         setLevel: function(level) {
-                    if(Level[level]) {
-                      currentLevel = Level[level];
+                    if(this[level]) {
+                      this.currentLevel = this[level];
                     }
                   },
         getLevel: function() {
-                    return currentLevel;
+                    return this.currentLevel;
                   }
         }
     });
